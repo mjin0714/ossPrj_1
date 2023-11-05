@@ -85,16 +85,6 @@ special_rate(){
 				rating=$(echo "$line" | awk -F ' ' '{print $2}')
 				sum=$((sum+rating))
 				count=$((count+1))
-				echo "success $i-$count"
-				#mv_id=$(echo "$line" | awk -F ' ' '{print $1}')
-				#mv_id=$((mv_id))
-				#if [ "$mv_id" -eq "$i" ]
-				#then
-					#rating=$(echo "$line" | awk -F ' ' '{print $2}')
-					#sum=$((sum+rating))
-					#count=$((count+1))
-					#echo "->mv_id=$mv_id, i=$i, rating= $rating, sum= $sum, count= $count"
-				#fi
 			done <<< "$prgs_data_i"
 			if [ "$count" -gt 0 ]
 			then
